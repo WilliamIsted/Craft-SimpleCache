@@ -1,5 +1,5 @@
 # Craft-SimpleCache
-A lightweight plugin which adds file modified timestamp Urls using the filter simpleCache
+A lightweight plugin which adds file modified timestamp Urls using the filter `simpleCache`. When you update a file (i.e. via FTP) the appended timestamp will update to the "Modified time" of the file to invalidate the browsers' cache of the old file.
 
 ## Installation
 
