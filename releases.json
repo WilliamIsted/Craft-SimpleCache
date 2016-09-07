@@ -1,0 +1,11 @@
+[
+	{
+		"version": "1.0.0",
+		"downloadUrl": "https://github.com/WilliamIsted/Craft-SimpleCache/archive/1.0.0.zip",
+		"date": "2016-09-07T13:23:00-00:00",
+		"notes": [
+			"[Added] Support for combined files. Check out the docs!",
+			"[Improved] Craft will notify you of updates available for this plugin from the update page.",
+		]
+	}
+]
