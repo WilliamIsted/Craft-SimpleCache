@@ -10,16 +10,28 @@ Go to Settings > Plugins from your Craft control panel and enable the SimpleCach
 
 ## Usage
 
+### CSS file
+
 ```jinja
 {% includeCssFile "/css/style.css" | simpleCache %}
 ```
 Output: `<link rel="stylesheet" type="text/css" href="/css/style.css?1465304321" />`
 
+### JavaScript file
 
 ```jinja
 {% includeJsFile "/js/scripts.js" | simpleCache %}
 ```
 Output: `<script type="text/javascript" src="/js/scripts.js?1465304321"></script>`
+
+### Apache (mod_include) combined file
+
+If you have a combined file that won't update it's modified time when it's sources do; you can append an array of dependent files to the `simpleCache` filter.
+
+```jinja
+{% includeCssFile "/css/styles.combined.css" | simpleCache([ '/css/styles.css', '/css/print.css', '/css/fonts.css' ]) %}
+```
+Output: `<link rel="stylesheet" type="text/css" href="/css/styles.combined.css?1465304321" />`
 
 ## Updates
 

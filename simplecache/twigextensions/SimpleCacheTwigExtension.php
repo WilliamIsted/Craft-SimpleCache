@@ -16,8 +16,15 @@ class SimpleCacheTwigExtension extends \Twig_Extension {
 		];
 	}
 
-	public function simpleCache( $file = false ) {
-		$modified = @filemtime( $_SERVER['DOCUMENT_ROOT']  . $file );
+	public function simpleCache( $file = false, $sources = false ) {
+		if ( is_array( $sources ) ) {
+			$modified = 0;
+			foreach( $sources as $source ) {
+				if ( $modified < $tmp = @filemtime( $_SERVER['DOCUMENT_ROOT'] . $source ) ) { $modified = $tmp;	}
+			}
+		} else {
+			$modified = @filemtime( $_SERVER['DOCUMENT_ROOT'] . $file );
+		}
 		return $file . ( $modified ? '?' . $modified : '' );
 	}
 
