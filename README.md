@@ -24,7 +24,7 @@ Output: `<link rel="stylesheet" type="text/css" href="/css/style.css?1465304321"
 ```
 Output: `<script type="text/javascript" src="/js/scripts.js?1465304321"></script>`
 
-### Apache (mod_include) combined file
+### Apache (mod_include / SSI) combined file
 
 If you have a combined file that won't update it's modified time when it's sources do; you can append an array of dependent files to the `simpleCache` filter.
 
