@@ -11,7 +11,7 @@ class SimpleCachePlugin extends BasePlugin {
 	}
 
 	public function getVersion() {
-		return '1.0.0';
+		return '1.0.1';
 	}
 
 	public function getDeveloper() {
@@ -20,6 +20,10 @@ class SimpleCachePlugin extends BasePlugin {
 
 	public function getDeveloperUrl() {
 		return 'https://william.isted.me/craft/';
+	}
+	
+	public function getDocumentationUrl() {
+		return 'https://github.com/WilliamIsted/Craft-SimpleCache/blob/master/README.md';
 	}
 
 	public function getReleaseFeedUrl() {
